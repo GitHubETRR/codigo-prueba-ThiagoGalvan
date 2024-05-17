@@ -11,5 +11,5 @@ int main(){
     printf("Ingrese el cateto B de su triangulo:\n");
     scanf("%d",&cateto_b);
     printf("El area de su triangulo es: %d",(cateto_b*cateto_a)/2);
-    return 0;
+    getchar();
 }

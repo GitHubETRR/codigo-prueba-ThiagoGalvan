@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "calculo de area triangulo": "c"
+        "calculo de area triangulo": "c",
+        "Calculo_de_area_triangulo.C": "cpp"
     }
 }
