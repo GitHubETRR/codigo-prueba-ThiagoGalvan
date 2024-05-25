@@ -11,5 +11,7 @@ int main(){
     scanf("%f",&MercaderiaComprada);
     Precio=Precioxkg*MercaderiaComprada;
     printf("El total a pagar es de %f",Precio);
+    getchar();
+    getchar();
     return 0;
 }
