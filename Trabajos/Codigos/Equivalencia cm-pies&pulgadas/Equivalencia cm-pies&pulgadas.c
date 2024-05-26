@@ -11,6 +11,7 @@ int main(){
     pulgadas=cm/2.54;
     pies=cm/30.48;
     printf("La equivalencia en pies es de %d y en pulgadas es de %f\n",pies,pulgadas);
-    system("pause");
+    getchar();
+    getchar();
     return 0;
 }
