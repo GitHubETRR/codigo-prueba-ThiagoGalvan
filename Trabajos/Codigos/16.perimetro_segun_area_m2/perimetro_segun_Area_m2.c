@@ -5,11 +5,11 @@
 
 int main (){
     float m2,perimetro;
-    printf("En este programa va a poder calcular el perimetro de su cuadrado ingresando su superficie(m2)");
+    printf("En este programa va a poder calcular el perimetro de su cuadrado ingresando su superficie(m2)\n");
     printf("Ingrese la superficie de su cuadrado:");
     scanf("%f",&m2);
-    perimetro=sqrt(m2);
-    printf("El perimetro de su cuadrado es %f",perimetro);
+    perimetro=sqrt(m2)*4;
+    printf("El perimetro de su cuadrado es: %.2f",perimetro);
     return 0;
 }
 
