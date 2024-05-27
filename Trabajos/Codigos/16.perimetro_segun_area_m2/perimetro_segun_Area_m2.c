@@ -12,5 +12,3 @@ int main (){
     printf("El perimetro de su cuadrado es: %.2f",perimetro);
     return 0;
 }
-
-//falta revisar
