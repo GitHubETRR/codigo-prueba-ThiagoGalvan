@@ -9,7 +9,7 @@ int main(){
     printf("Ingrese el valor del segundo ángulo interior: ");
     scanf("%f", &ang2);
     ang_res = 180 - (ang1 + ang2);
-    if (ang_res>0 & ang_res<180)
+    if (ang_res>0 && ang_res<180)
     {
         printf("El angulo restante es:%.2f",ang_res);
     }
