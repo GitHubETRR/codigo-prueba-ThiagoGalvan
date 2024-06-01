@@ -31,6 +31,8 @@ int main(){
         else{
             printf("Anio:%d Mes:%d Dia:%d",year,month,days);
         }
+    getchar();
+    getchar();
     return 0;
     }
 
