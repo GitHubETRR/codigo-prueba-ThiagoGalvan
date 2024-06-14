@@ -28,5 +28,5 @@ int main(){
         }
         
     } while (1==continuar);
-    
+    return 0;
 }
