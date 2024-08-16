@@ -4,56 +4,57 @@ correspondiente, tener en cuenta que no se pueden realizar divisiones por cero.*
 #include <stdio.h>
 
 void Bienvenida(void);
-char Menu(int[]);
-void Sumar(int[]);
-void Resta(int[]);
-void Division(int[]);
-void Multiplicacion(int[]);
+char Menu(float[]);
+void Sumar(float[]);
+void Resta(float[]);
+void Division(float[]);
+void Multiplicacion(float[]);
 int Continuar(void);
 
 
 int main(){   
     int continuar;
-    int num[2];
+    float num[2];
     char op;
     Bienvenida();
-    op=Menu(num);
-    
-    switch (op){
-    case 'S':
-        Sumar(num);
-        break;
-    
-    case 'R':
-        Resta(num);
-        break;
-    
-    case 'M':
-        Multiplicacion(num);
-        break;
-    
-    case 'D':
-        Division(num);
-        break;    
-    
-    default:
-        break;
-    }
+    do{
+        op=Menu(num);
+        switch (op){
+            case 'S':
+                Sumar(num);
+            break;
+            
+            case 'R':
+                Resta(num);
+            break;
+            
+            case 'M':
+                Multiplicacion(num);
+            break;
+            
+            case 'D':
+                Division(num);
+            break;    
+            
+            default:
+            break;
+        }
+        continuar=Continuar();
+    } while (1==continuar);
 }
 
 
 
 
 void Bienvenida(void){
-
     printf("En este programa va a poder ingresar dos numeros y elegir que operacion matematica realizar\n");
 }
-char Menu (int num[]){
+char Menu (float num[]){
     char op;
     printf("Ingrese el primer numero: ");
-    scanf("%d",&num[0]);
+    scanf("%f",&num[0]);
     printf("Ingrese el segundo numero: ");
-    scanf("%d",&num[1]);
+    scanf("%f",&num[1]);
     printf("Ingrese la operacion que desea realizar:\n");
     printf("S-Suma\n");
     printf("R-Resta\n");
@@ -63,38 +64,45 @@ char Menu (int num[]){
     return op;
 }
 
-void Sumar (int num[]){
-    int suma;
+void Sumar (float num[]){
+    float suma;
     suma=num[0]+num[1];
-    printf("La suma de los dos numeros es: %d\n",suma);
+    printf("La suma de los dos numeros es: %.2f\n",suma);
 }
 
-void Resta (int num[]){
-    int resta;
+void Resta (float num[]){
+    float resta;
     resta=num[0]-num[1];
-    printf("La resta de los dos numeros es: %d\n",resta);
+    printf("La resta de los dos numeros es: %.2f\n",resta);
 }
 
-void Division (int num[]){
-    int division;
+void Division (float num[]){
+    float division;
     if (num[1]!=0){
         division=num[0]/num[1];
-        printf("La division de los dos numeros es: %d\n",division);
+        printf("La division de los dos numeros es: %.2f\n",division);
     }else{
         do{
             printf("No se puede dividir por 0\n");
             printf("Ingrese un valor distinto de 0\n");
-            scanf("%d",&num[1]);
+            scanf("%f",&num[1]);
         } while (num[1]==0);
         division=num[0]/num[1];
-        printf("La division de los dos numeros es: %d\n",division);
+        printf("La division de los dos numeros es: %.2f\n",division);
     }
-    printf("La division de los dos numeros es: %d\n",division);
 }
 
-void Multiplicacion (int num[]){
-    int multiplicacion;
+void Multiplicacion (float num[]){
+    float multiplicacion;
     multiplicacion=num[0]*num[1];
-    printf("La suma de los dos numeros es: %d\n",multiplicacion);
+    printf("La multiplicacion de los dos numeros es: %.2f\n",multiplicacion);
 }
 
+int Continuar (void){
+    int redo;
+    printf("¿Quiere otros numeros?\n");
+    printf("(1)Si\n");
+    printf("(0)No\n");
+    scanf("%d",&redo);
+    return redo;
+}
