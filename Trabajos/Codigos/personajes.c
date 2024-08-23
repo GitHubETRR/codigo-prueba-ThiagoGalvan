@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX_CHAR 5O;
+#define MAX_CHAR 50
 
 
 typedef struct{
@@ -16,7 +16,7 @@ typedef struct{
 }personaje_t;
 
 //Batman
-personaje_t batman = {"Batman", 100, 100, 100, 100,100,100,100,100,"DC"}
+personaje_t batman = {"Batman", 100, 100, 100, 100,100,100,100,100,"DC"};
 int main(){
-    
+    printf("%s",batman.nombre);
 }
