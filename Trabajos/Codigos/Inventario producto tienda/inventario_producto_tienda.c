@@ -143,51 +143,5 @@ void MostrarProducto(producto_t productos[]){
 }
 
 void BuscarProducto(producto_t productos[],int codigo_buscar){
-    int i;
-    for (i=0; i<LIMITE; i++){
-        if(productos[i].codigo==codigo_buscar && productos[i].codigo!=VACIO){
-            printf("Nombre del producto: %s\n"   ,productos[i].nombre);
-            printf("Precio del producto:%.2f\n"  ,productos[i].precio );
-            printf("Cantidad del producto:%d\n"  ,productos[i].cantidad);
-            printf("Codigo del producto: %d\n\n" ,productos[i].codigo);
-            break;
-        }else("No existe un producto con ese codigo");
-    }
-}
-
-int ModificarCantidad(producto_t productos[], int codigo_buscar){
-    int i,nueva_cantidad;
-    for (i=0; i<LIMITE; i++){
-        if(productos[i].codigo==codigo_buscar && productos[i].codigo!=VACIO){
-            printf("Nombre del producto: %s\n"   ,productos[i].nombre);
-            printf("Precio del producto:%.2f\n"  ,productos[i].precio );
-            printf("Cantidad del producto:%d\n"  ,productos[i].cantidad);
-            printf("Codigo del producto: %d\n\n" ,productos[i].codigo);
-            break;
-        }else("No existe un producto con ese codigo");
-    }
-    printf("Ingrese la nueva cantidad de producto: ");
-    scanf("%d",&nueva_cantidad);
-    productos[i].cantidad=nueva_cantidad;
-    printf("Cantidad modificada correctamente, ahora su producto tiene %d unidades\n",nueva_cantidad);
-}
-
-    int EliminarProducto(producto_t productos[], int *cantProductos){
-    int codigo_buscar, encontrado = 0;
-    for (int i = 0; i < LIMITE; i++){
-        if (productos[i].codigo == codigo_buscar && productos[i].codigo != VACIO){
-            productos[i].codigo = VACIO;
-            for (int j = i; j < *cantProductos - 1; j++){
-                productos[j] = productos[j + 1]; // Desplazar los productos
-            }
-            (*cantProductos)--;
-            printf("Producto eliminado correctamente.\n");
-            encontrado = 1;
-            break;
-        }
-    }
-    if (!encontrado) {
-        printf("No existe un producto con ese código.\n");
-    }
-    return *cantProductos;
+    
 }
