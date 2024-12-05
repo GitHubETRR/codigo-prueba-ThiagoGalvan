@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Con qué candidato te identificas?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>¿Con qué candidato te identificas?</h1>
+    </header>
+    <main>
+        <section class="quiz">
+            <h2>Responde a las siguientes preguntas y descubre qué político está más cerca de ti</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <h3>Pregunta 1: ¿Cuál es tu prioridad en política?</h3>
+                    <input type="radio" id="economia" name="pregunta1" value="economia">
+                    <label for="economia">Economía</label>
+                    <input type="radio" id="educacion" name="pregunta1" value="educacion">
+                    <label for="educacion">Educación</label>
+                    <input type="radio" id="seguridad" name="pregunta1" value="seguridad">
+                    <label for="seguridad">Seguridad</label>
+                </div>
+                <div class="question">
+                    <h3>Pregunta 2: ¿Cuál es tu posición sobre la justicia social?</h3>
+                    <input type="radio" id="izquierda" name="pregunta2" value="izquierda">
+                    <label for="izquierda">Izquierda</label>
+                    <input type="radio" id="centro" name="pregunta2" value="centro">
+                    <label for="centro">Centro</label>
+                    <input type="radio" id="derecha" name="pregunta2" value="derecha">
+                    <label for="derecha">Derecha</label>
+                </div>
+                <!-- Agrega más preguntas aquí -->
+                <button id="submit-btn">Enviar</button>
+            </form>
+            <div id="result-container">
+                <h2>Tu resultado:</h2>
+                <p id="result-text"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
